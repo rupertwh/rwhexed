@@ -1,3 +1,5 @@
+/* Original file date: Nov-22-1995 */
+
 #ifndef __HEWND_H__
 #define __HEWND_H__
 
@@ -59,5 +61,3 @@ typedef HECOLORS* PHECOLORS;
 BOOL hex_RegisterClass (HAB hab, PSZ pszName);
 
 #endif
-
-

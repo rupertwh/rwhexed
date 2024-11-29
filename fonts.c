@@ -1,3 +1,5 @@
+/* Original file date: Dez-16-1996 */
+
 #define INCL_DOS
 #define INCL_DOSERRORS
 #define INCL_GPI
@@ -615,9 +617,3 @@ void s_SwapSizes (PFONTSIZE pa, PFONTSIZE pb)
     memcpy (pa, pb, sizeof fs);
     memcpy (pb, &fs, sizeof fs);
 }
-
-
-
-
-
-

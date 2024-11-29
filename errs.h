@@ -1,4 +1,4 @@
-
+/* Original file date: Mär-19-1995 */
 
 #define ERR_OPEN        0x00001000
 #define ERR_SAVE        0x00002000
@@ -16,7 +16,3 @@
 #define ERR_READEAS     0x00000018
 #define ERR_WRITEFILE   0x00000019
 #define ERR_WRITEEAS    0x0000001A
-
-
-
-

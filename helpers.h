@@ -1,3 +1,5 @@
+/* Original file date: Apr-4-1997 */
+
 #ifndef HELPERS_H
 #define HELPERS_H
 
@@ -36,4 +38,3 @@ int hlp_printPMError (HAB hab);
 #endif
 
 #endif
-

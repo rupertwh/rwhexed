@@ -1,10 +1,12 @@
+/* Original file date: Jan-15-1995 */
+
 /******************************************************************************
 *                                                                             *
 *   about.c                                                                   *
 *                                                                             *
 *                                                                             *
 ******************************************************************************/
- 
+
 
 
 
@@ -21,7 +23,7 @@ MRESULT APIENTRY AboutDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
     BOOL    bDDP = FALSE;
     MRESULT mRet = (MRESULT) 0;
 
-    switch (ulMsg) 
+    switch (ulMsg)
     {
       case WM_INITDLG:
         hlp_DlgNicePos (hwnd);
@@ -51,10 +53,3 @@ MRESULT APIENTRY AboutDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         mRet = WinDefDlgProc (hwnd, ulMsg, mp1, mp2);
     return mRet;
 }
-
-
-
-
-
-
-

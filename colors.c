@@ -1,10 +1,12 @@
+/* Original file date: Mär-25-1995 */
+
 /******************************************************************************
 *                                                                             *
 *   colors.c                                                                   *
 *                                                                             *
 *                                                                             *
 ******************************************************************************/
- 
+
 
 
 
@@ -49,7 +51,7 @@ MRESULT APIENTRY ColorsDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
     PFONTMETRICS    pfm;
     LONG        lVal;
 
-    switch (ulMsg) 
+    switch (ulMsg)
     {
       case WM_INITDLG:
         hwndHex = *((HWND*)PVOIDFROMMP (mp2));
@@ -63,7 +65,7 @@ MRESULT APIENTRY ColorsDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         hwndSample = WinWindowFromID (hwnd, IDD_C_SAMPLE);
         pColorOrgProc = WinSubclassWindow (hwndRect, ColorSubProc);
         pSampleOrgProc = WinSubclassWindow (hwndSample, SampleSubProc);
- 
+
         WinSendMsg (hwndHex, WMUSR_HE_QUERYCOLORS, MPFROMP (&hecCustom), MPFROMLONG (2));
         WinSendMsg (hwndHex, WMUSR_HE_QUERYCOLORS, MPFROMP (&hecSystem), MPFROMLONG (1));
         iColorTable = (int) WinSendMsg (hwndHex, WMUSR_HE_QUERYCOLORS, MPFROMP (&hecDefault), MPFROMLONG (0));
@@ -91,7 +93,7 @@ MRESULT APIENTRY ColorsDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         cxChar = pfm->lAveCharWidth;
         cyChar = pfm->lMaxBaselineExt;
         cyDesc = pfm->lMaxDescender;
-        
+
         bListOK = FALSE;
         s_MakeList (hwnd);
         bListOK = TRUE;
@@ -103,13 +105,13 @@ MRESULT APIENTRY ColorsDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         switch (SHORT1FROMMP (mp1))
         {
           case DID_OK:
-            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT), 
+            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT),
                             QW_PARENT), QW_PARENT),
                             WM_COMMAND, MPFROM2SHORT (DID_OK, 0), 0);
             break;
 
           case DID_CANCEL:
-            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT), 
+            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT),
                             QW_PARENT), QW_PARENT),
                             WM_COMMAND, MPFROM2SHORT (DID_CANCEL, 0), 0);
             break;
@@ -326,7 +328,7 @@ MRESULT APIENTRY ColorSubProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         i = (int) WinSendDlgItemMsg (hwndDlg, IDD_C_LIST, LM_QUERYSELECTION,
                         MPFROMSHORT (LIT_FIRST), 0);
         if (i < 0) i = 0;
- 
+
         WinQueryWindowRect (hwnd, &rectl);
         WinFillRect (hps, &rectl, LONGARR(*phecCurr)[i]);
         WinEndPaint (hps);
@@ -367,7 +369,7 @@ MRESULT APIENTRY SampleSubProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         GpiSetCharSet (hps, 1);
         GpiCreateLogColorTable (hps, LCOL_RESET, LCOLF_RGB, 0, 0, NULL);
 
- 
+
         WinQueryWindowRect (hwnd, &rectl);
         WinFillRect (hps, &rectl, phecCurr->lrgbTextBack);
 
@@ -402,7 +404,7 @@ MRESULT APIENTRY SampleSubProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
 
         GpiDeleteSetId (hps, 1);
         WinEndPaint (hps);
- 
+
         bDWP = FALSE;
         break;
 
@@ -412,5 +414,3 @@ MRESULT APIENTRY SampleSubProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         mRes = (*pSampleOrgProc) (hwnd, ulMsg, mp1, mp2);
     return mRes;
 }
-
-

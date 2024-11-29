@@ -1,3 +1,5 @@
+/* Original file date: Apr-4-1997 */
+
 #define HELPERS_C
 
 #define INCL_DOS
@@ -314,13 +316,3 @@ int hlp_printPMError (HAB hab)
                                     SEVERITY_UNRECOVERABLE == sev ? "Unrecoverable" :
                                     "unkown error severity", code);
 }
-
-
-
-
-
-
-
-
-
-

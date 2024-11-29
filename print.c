@@ -1,3 +1,5 @@
+/* Original file date: Sep-8-1997 */
+
 #define INCL_DOS
 #define INCL_DOSERRORS
 #define INCL_PM
@@ -614,8 +616,3 @@ int _Inline s_printchar (int c)
                        "אבגדהוזחטיךכלםמןנסעףפץצקרשתûü‎\xfe.";
     return pc[c];
 }
-
-
-
-
-

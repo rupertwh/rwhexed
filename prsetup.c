@@ -1,3 +1,5 @@
+/* Original file date: Apr-1-1997 */
+
 /******************************************************************************
 **
 **   prsetup.c
@@ -513,11 +515,3 @@ static int s_GetSelectedSize (HWND hwnd, PWNDDATA pWndData)
     WinQueryDlgItemText (hwnd, IDD_PS_SIZE, sizeof buff, buff);
     return (int) (atof (buff) * 10.);
 }
-
-
-
-
-
-
-
-

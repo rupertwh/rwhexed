@@ -1,3 +1,5 @@
+/* Original file date: Dez-9-1996 */
+
 #ifndef __FILEIO_H__
 #define __FILEIO_H__
 
@@ -20,5 +22,3 @@ int fio_QueryDriveInfo (int iQDrive, PDRIVESPEC pSpec);
 int fio_RemoveEA (PSECDATA pSecData, int iEAs, int iEARemove);
 
 #endif
-
-

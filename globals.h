@@ -1,3 +1,5 @@
+/* Original file date: Dez-16-1996 */
+
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
@@ -73,4 +75,3 @@ PGLOBALSTRUCT glb_GetPointer (void);
 
 
 #endif
-

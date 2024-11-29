@@ -1,3 +1,5 @@
+/* Original file date: Aug-28-1995 */
+
 #define INCL_WIN
 #define INCL_DOS
 #define INCL_DOSERRORS
@@ -111,18 +113,3 @@ void _Optlink t2_SepThread (PVOID pArg)
     mem_HeapFree (pti);
     WinTerminate (hab);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

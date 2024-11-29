@@ -1,3 +1,4 @@
+/* Original file date: Dez-21-1996 */
 
 #define INCL_DOS
 #define INCL_DOSERRORS
@@ -31,9 +32,3 @@ HFILE s_redir (HFILE hfile)
     DosClose (wpipe);
     return rpipe;
 }
-
-
-
-
-
-

@@ -1,3 +1,4 @@
+# /* Original file date: Mär-31-1997 */
 # release.mak
 # Created by IBM WorkFrame/2 MakeMake at 16:28:40 on 31 Mar 1997
 #
@@ -7,7 +8,7 @@
 #  Link::Linker
 #  Bind::Resource Bind
 
-.SUFFIXES: .C .RC .obj .res 
+.SUFFIXES: .C .RC .obj .res
 
 .all: \
     g:\source\hexedit\rwhexed.exe
@@ -49,7 +50,7 @@ g:\source\hexedit\rwhexed.exe: \
     @echo " Bind::Resource Bind "
     icc.exe @<<
      /B" /exepack:1 /pmtype:pm /packd /optfunc /nologo"
-     /Feg:\source\hexedit\rwhexed.exe 
+     /Feg:\source\hexedit\rwhexed.exe
      DEF.DEF
      g:\source\hexedit\STATUS.obj
      g:\source\hexedit\THREAD2.obj

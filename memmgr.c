@@ -1,3 +1,5 @@
+/* Original file date: Apr-5-1997 */
+
 #define INCL_DOS
 #define INCL_DOSERRORS
 
@@ -343,19 +345,3 @@ APIRET mem_SetSize (PVOID pBase, ULONG ulOld, ULONG ulNew)
 
     return rc;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

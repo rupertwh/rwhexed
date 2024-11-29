@@ -1,3 +1,5 @@
+/* Original file date: Dez-1-1996 */
+
 #ifndef DEBUG_H
 #define DEBUG_H
 
@@ -15,5 +17,3 @@ void dbg_MsgDo (char* pszMsg, char* pszFile, int nLine);
 
 
 #endif
-
-

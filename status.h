@@ -1,3 +1,5 @@
+/* Original file date: Sep-16-1995 */
+
 #define WMUSR_ST_SETSIZE        (WM_USER + 200)
 #define WMUSR_ST_SETOFFSET      (WM_USER + 201)
 #define WMUSR_ST_SETSEL         (WM_USER + 202)
@@ -6,7 +8,3 @@
 #define WMUSR_ST_QUERYOPTHIGHT  (WM_USER + 205)
 
 BOOL st_RegisterClass (HAB hab, PSZ pszName);
-
-
-
-

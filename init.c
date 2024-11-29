@@ -1,3 +1,5 @@
+/* Original file date: Apr-4-1997 */
+
 #define INCL_DOS
 #define INCL_DOSERRORS
 #define INCL_WIN
@@ -190,15 +192,3 @@ static void s_StandardSize (PSWP pSwp)
     pSwp->x = 0;
     pSwp->y = 3 * SYSVAL (SV_CYICON) - SYSVAL (SV_CYSIZEBORDER);
 }
-
-
-
-
-
-
-
-
-
-
-
-

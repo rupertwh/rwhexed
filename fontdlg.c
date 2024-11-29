@@ -1,10 +1,12 @@
+/* Original file date: Mär-17-1995 */
+
 /******************************************************************************
 *                                                                             *
 *   fontdlg.c                                                                 *
 *                                                                             *
 *                                                                             *
 ******************************************************************************/
- 
+
 
 
 
@@ -42,7 +44,7 @@ MRESULT APIENTRY FontDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
     MRESULT     mRet = (MRESULT) 0;
     static HWND hwndSample;
 
-    switch (ulMsg) 
+    switch (ulMsg)
     {
       case WM_INITDLG:
         hwndSample = WinWindowFromID (hwnd, IDD_F_SAMPLE);
@@ -57,13 +59,13 @@ MRESULT APIENTRY FontDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         switch (SHORT1FROMMP (mp1))
         {
           case DID_OK:
-            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT), 
+            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT),
                             QW_PARENT), QW_PARENT),
                             WM_COMMAND, MPFROM2SHORT (DID_OK, 0), 0);
             break;
 
           case DID_CANCEL:
-            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT), 
+            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT),
                             QW_PARENT), QW_PARENT),
                             WM_COMMAND, MPFROM2SHORT (DID_CANCEL, 0), 0);
             break;
@@ -103,7 +105,7 @@ MRESULT APIENTRY FontDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
             else
                 bDDP = TRUE;
             break;
- 
+
           default:
             bDDP = TRUE;
             break;
@@ -164,7 +166,7 @@ static void s_SetupSizeList (HWND hwnd, int nFace)
     char    szBuf[20];
 
     hwndSizeList = WinWindowFromID (hwnd, IDD_F_SIZE);
- 
+
     WinSendMsg (hwndSizeList, LM_DELETEALL, 0, 0);
     for (i = nIndex[nFace]; i < g.nFonts; i++) {
         if (g.pFont[i].nFirstType != nIndex[nFace])
@@ -202,7 +204,7 @@ MRESULT APIENTRY FontSubProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         fnt_CreateFont (hps, nCurrFont, 1);
         GpiSetCharSet (hps, 1);
 
- 
+
         lBack = WinQuerySysColor (HWND_DESKTOP, SYSCLR_DIALOGBACKGROUND, 0);
         WinQueryWindowRect (hwnd, &rectl);
         GpiCreateLogColorTable (hps, LCOL_RESET, LCOLF_RGB, 0, 0, NULL); /* set RGB mode */
@@ -216,7 +218,7 @@ MRESULT APIENTRY FontSubProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
 
         GpiDeleteSetId (hps, 1);
         WinEndPaint (hps);
- 
+
         bDWP = FALSE;
         break;
 
@@ -226,5 +228,3 @@ MRESULT APIENTRY FontSubProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         mRes = (*pSampleOrgProc) (hwnd, ulMsg, mp1, mp2);
     return mRes;
 }
-
-

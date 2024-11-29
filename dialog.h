@@ -1,3 +1,5 @@
+/* Original file date: Apr-1-1997 */
+
 #define IDD_ABOUT                   100
 #define IDD_SEARCH                  400
 #define IDD_S_RBSTR                 401

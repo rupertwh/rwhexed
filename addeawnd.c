@@ -1,3 +1,5 @@
+/* Original file date: Dez-7-1996 */
+
 #define INCL_WIN
 
 #include <os2.h>
@@ -90,5 +92,3 @@ MRESULT APIENTRY AddEADlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         mRet = WinDefDlgProc (hwnd, ulMsg, mp1, mp2);
     return mRet;
 }
-
-

@@ -1,3 +1,5 @@
+/* Original file date: Mär-16-1995 */
+
 #ifndef __MEMMGR_H__
 #define __MEMMGR_H__
 
@@ -10,5 +12,3 @@ APIRET mem_SetSize (PVOID pBase, ULONG ulOld, ULONG ulNew);
 
 
 #endif
-
-

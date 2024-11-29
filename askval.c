@@ -1,3 +1,5 @@
+/* Original file date: Sep-13-1995 */
+
 /******************************************************************************
 *                                                                             *
 *   askval.c                                                                    *
@@ -110,10 +112,3 @@ MRESULT APIENTRY AskValDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         mRet = WinDefDlgProc (hwnd, ulMsg, mp1, mp2);
     return mRet;
 }
-
-
-
-
-
-
-

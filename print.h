@@ -1,3 +1,5 @@
+/* Original file date: Apr-1-1997 */
+
 #ifndef PRINT_H
 #define PRINT_H
 
@@ -53,5 +55,3 @@ long prn_GetPrintableWidth (HDC hdc);
 #endif
 
 #endif
-
-

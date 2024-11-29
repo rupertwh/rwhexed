@@ -1,3 +1,5 @@
+/* Original file date: Dez-11-1996 */
+
 #define INCL_WIN
 #define INCL_DOS
 
@@ -49,8 +51,3 @@ int main (int argc, char **parg)
 
     return 0;
 }
-
-
-
-
-

@@ -1,3 +1,5 @@
+; Original file date: Dez-21-1996
+
 NAME    RWHEXED  WINDOWAPI
 
 DESCRIPTION 'Hex Editor Ver. 1.0 (c) 1995,1996, Rupert Weber-Henschel'
@@ -6,5 +8,3 @@ CODE    MOVEABLE
 DATA    MOVEABLE MULTIPLE
 
 STACKSIZE   100000
-
-

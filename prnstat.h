@@ -1,3 +1,4 @@
+/* Original file date: Apr-1-1997 */
 
 typedef struct {
         USHORT  usSize;
@@ -14,6 +15,3 @@ typedef struct {
 typedef PRNSTAT* PPRNSTAT;
 
 MRESULT APIENTRY PrnStatDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2);
-
-
-

@@ -1,3 +1,5 @@
+/* Original file date: Apr-5-1997 */
+
 #define INCL_PM
 #define INCL_DOS
 #define INCL_DOSERRORS
@@ -2222,13 +2224,3 @@ static BOOL s_IsOffSelected (LONG lOff, PWNDDATA pWndData)
         return TRUE;
     return FALSE;
 }
-
-
-
-
-
-
-
-
-
-

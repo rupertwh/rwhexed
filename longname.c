@@ -1,10 +1,12 @@
+/* Original file date: Feb-26-1995 */
+
 /******************************************************************************
 *                                                                             *
 *   longname.c                                                                *
 *                                                                             *
 *                                                                             *
 ******************************************************************************/
- 
+
 
 
 
@@ -37,7 +39,7 @@ MRESULT APIENTRY LNameDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
     BOOL    bDDP = FALSE;
     MRESULT mRet = (MRESULT) 0;
 
-    switch (ulMsg) 
+    switch (ulMsg)
     {
       case WM_INITDLG:
         WinSendDlgItemMsg (hwnd, IDD_L_FILE, EM_SETTEXTLIMIT, MPFROMSHORT (CCHMAXPATH), 0);
@@ -76,9 +78,3 @@ MRESULT APIENTRY LNameDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         mRet = WinDefDlgProc (hwnd, ulMsg, mp1, mp2);
     return mRet;
 }
-
-
-
-
-
-

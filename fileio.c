@@ -1,3 +1,5 @@
+/* Original file date: Dez-16-1996 */
+
 #define INCL_DOS
 #define INCL_DOSERRORS
 #define INCL_WIN
@@ -1261,6 +1263,3 @@ int fio_QueryDriveInfo (int iQDrive, PDRIVESPEC pSpec)
     }
     return iDrive;
 }
-
-
-

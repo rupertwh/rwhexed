@@ -1,10 +1,12 @@
+/* Original file date: Mär-17-1995 */
+
 /******************************************************************************
 *                                                                             *
 *   inidlg.c                                                                  *
 *                                                                             *
 *                                                                             *
 ******************************************************************************/
- 
+
 
 
 
@@ -31,7 +33,7 @@ MRESULT APIENTRY IniDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
     BOOL    bDDP = FALSE;
     MRESULT mRet = (MRESULT) 0;
 
-    switch (ulMsg) 
+    switch (ulMsg)
     {
       case WM_INITDLG:
         strcpy (szIniName, fio_QueryIniName ());
@@ -43,13 +45,13 @@ MRESULT APIENTRY IniDlgProc (HWND hwnd, ULONG ulMsg, MPARAM mp1, MPARAM mp2)
         switch (SHORT1FROMMP (mp1))
         {
           case DID_OK:
-            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT), 
+            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT),
                             QW_PARENT), QW_PARENT),
                             WM_COMMAND, MPFROM2SHORT (DID_OK, 0), 0);
             break;
 
           case DID_CANCEL:
-            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT), 
+            WinPostMsg (WinQueryWindow (WinQueryWindow (WinQueryWindow (hwnd, QW_PARENT),
                             QW_PARENT), QW_PARENT),
                             WM_COMMAND, MPFROM2SHORT (DID_CANCEL, 0), 0);
             break;
@@ -96,21 +98,10 @@ static BOOL s_Prompt (HWND hwnd)
     fd.fl = FDS_ENABLEFILELB | FDS_SAVEAS_DIALOG;
     fd.pszTitle = "INI File Location";
     strcpy (fd.szFullFile, szIniName);
- 
+
     WinFileDlg (HWND_DESKTOP, hwnd, &fd);
     if (DID_OK != fd.lReturn) return FALSE;
 
     strcpy (szIniName, fd.szFullFile);
     return TRUE;
 }
-
-
-
-
-
-
-
-
-
-
-

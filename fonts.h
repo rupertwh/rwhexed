@@ -1,3 +1,5 @@
+/* Original file date: Dez-16-1996 */
+
 #ifndef FONTS_H
 #define FONTS_H
 
@@ -62,5 +64,3 @@ void fnt_FreeFontList (PFONTFAMILY pfam);
 
 
 #endif
-
-

@@ -1,3 +1,5 @@
+/* Original file date: Dez-16-1996 */
+
 #ifndef TYPES_H
 #define TYPES_H
 
@@ -75,4 +77,3 @@ typedef DRIVESPEC* PDRIVESPEC;
 typedef void (*PTHREADFUNC) (HAB hab, ULONG ulArg);
 
 #endif
-

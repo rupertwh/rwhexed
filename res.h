@@ -1,3 +1,5 @@
+/* Original file date: Dez-15-1996 */
+
 #ifndef __RES_H__
 #define __RES_H__
 
@@ -91,4 +93,3 @@
 
 
 #endif
-

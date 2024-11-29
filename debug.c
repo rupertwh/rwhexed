@@ -1,3 +1,5 @@
+/* Original file date: Dez-1-1996 */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -14,11 +16,3 @@ void dbg_MsgDo (char* pszMsg, char* pszFile, int nLine)
 
     fprintf (stdout, "%.13s: Line %d: %s\n", p, nLine, pszMsg);
 }
-
-
-
-
-
-
-
-

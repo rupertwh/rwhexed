@@ -1,3 +1,5 @@
+/* Original file date: Sep-19-1995 */
+
 #define INCL_WIN
 #define INCL_GPI
 
@@ -362,19 +364,3 @@ static void s_Draw3DRect (HPS hps, PRECTL prectl, BOOL bInset)
 
     GpiSetColor (hps, lColor);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

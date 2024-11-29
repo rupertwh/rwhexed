@@ -1,3 +1,5 @@
+/* Original file date: Apr-1-1997 */
+
 #define INCL_WIN
 #define INCL_GPI
 #define INCL_DOS
@@ -1529,9 +1531,3 @@ static void s_CreateEAMenu (PWNDDATA pWndData)
         WinSendMsg (hwndEA, MM_INSERTITEM, MPFROMP (&mi), MPFROMP (pSecData[i].pszName));
     }
 }
-
-
-
-
-
-

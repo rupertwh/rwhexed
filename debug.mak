@@ -1,3 +1,4 @@
+# /* Original file date: Apr-1-1997 */
 # debug.mak
 # Created by IBM WorkFrame/2 MakeMake at 11:47:41 on 1 April 1997
 #
@@ -7,7 +8,7 @@
 #  Link::Linker
 #  Bind::Resource Bind
 
-.SUFFIXES: .C .RC .obj .res 
+.SUFFIXES: .C .RC .obj .res
 
 .all: \
     g:\source\hexedit\rwhexed.exe
@@ -51,7 +52,7 @@ g:\source\hexedit\rwhexed.exe: \
     @echo " Bind::Resource Bind "
     icc.exe @<<
      /B" /de /dbgpack /pmtype:pm /nologo"
-     /Feg:\source\hexedit\rwhexed.exe 
+     /Feg:\source\hexedit\rwhexed.exe
      DEF.DEF
      g:\source\hexedit\STATUS.obj
      g:\source\hexedit\THREAD2.obj

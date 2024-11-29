@@ -1,3 +1,5 @@
+/* Original file date: Apr-1-1997 */
+
 #ifndef __WMDEFS_H__
 #define __WMDEFS_H__
 
@@ -23,7 +25,3 @@
 
 
 #endif
-
-
-
-

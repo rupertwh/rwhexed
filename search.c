@@ -1,3 +1,5 @@
+/* Original file date: Apr-4-1997 */
+
 /******************************************************************************
 *                                                                             *
 *   search.c                                                                   *
@@ -235,8 +237,3 @@ static void s_ReadHexEntry (HWND hwnd)
                 aSearchHex[nHexLen++] = (unsigned char) val;
         }
 }
-
-
-
-
-

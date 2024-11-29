@@ -1,3 +1,5 @@
+/* Original file date: Dez-16-1996 */
+
 #ifndef PRSETUP_H
 #define PRSETUP_H
 
@@ -13,4 +15,3 @@ BOOL prs_Setup (HWND hwnd, HMODULE hRes, PPRINTDEF pdef);
 #endif
 
 #endif
-

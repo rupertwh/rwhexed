@@ -1,3 +1,5 @@
+/* Original file date: Apr-1-1997 */
+
 /******************************************************************************
 *                                                                             *
 *   prnstat.c                                                                 *
@@ -104,6 +106,3 @@ static void s_stat (HWND hwnd, PPRNSTAT ps, BOOL bClose)
                 mem_HeapFree (ps);
         }
 }
-
-
-
