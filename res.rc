@@ -1,0 +1,126 @@
+#define INCL_WIN
+
+#include <os2.h>
+
+#include "res.h"
+
+rcinclude dialog.dlg
+
+ICON    ID_FRAMERES     "icon.ico"
+POINTER ID_CARET        "text.ptr"
+
+
+MENU    ID_FRAMERES
+{
+    SUBMENU "~File",        M_FILE
+    {
+        MENUITEM "~New\tCtrl+N", MI_NEW
+        MENUITEM "~Open...\tCtrl+O", MI_OPEN
+        MENUITEM "~Save\tCtrl+S", MI_SAVE
+        MENUITEM "Save ~As...", MI_SAVEAS
+        MENUITEM "~Close\tCtrl+F4", MI_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "~Print", MI_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MI_EXIT
+    }
+    SUBMENU "~Edit",        M_MODIFY
+    {
+        MENUITEM "Cu~t\tShift+Del", MI_CUT
+        MENUITEM "~Copy\tCtrl+C", MI_COPY
+        MENUITEM "~Paste\tCtrl+V", MI_PASTE
+        MENUITEM "C~lear\tDel", MI_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "~Insert...\tCtrl+I", MI_INSERT
+        MENUITEM "~Delete...\tCtrl+D", MI_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "~Find...\tCtrl+F", MI_SEARCH
+        MENUITEM "~Repeat last find\tCtrl+R", MI_REPEAT
+        MENUITEM "~Goto offset...\tCtrl+G", MI_GOTO
+        MENUITEM SEPARATOR
+        MENUITEM "~Add EA...\tCtrl+E", MI_ADDEA
+    }
+
+    SUBMENU "~Settings",    M_SETTINGS
+    {
+        MENUITEM "~Preferences...", MI_PREFS
+    }
+
+
+    SUBMENU "~View",    M_VIEW
+    {
+        MENUITEM "~Data",   MI_DATA
+        SUBMENU "~EAs",     M_EAS
+        {
+        }
+    }
+
+    SUBMENU "~Help", M_HELP
+    {
+        MENUITEM "~Product Information...", MI_ABOUT
+    }
+}
+
+STRINGTABLE
+{
+    IDS_APPTITLE,       "RW Hex Editor"
+    IDS_MODULENAME,     "RWHEXED"
+    IDS_CLIENTCLASS,    "RWHexEdClientClass"
+    IDS_HEXCLASS,       "RWHexEdEntryClass"
+    IDS_STATUSCLASS,    "RWHexEdStatusClass"
+    IDS_UNTITLED,       "untitled"
+
+    IDS_INISYSAPP,      "RWHexEdit"
+    IDS_INISYSKEY,      "INI Filespec"
+    IDS_INIAPPWIN,      "Window Settings"
+    IDS_INIKEYWINPOS,   "Frame Position"
+    IDS_INIAPPFONT,     "Font Settings"
+    IDS_INIKEYFNAME,    "Facename"
+    IDS_INIKEYFSIZE,    "Size"
+    IDS_INIAPPCOLOR,    "Colors"
+    IDS_INIKEYSCHEME,   "Scheme"
+    IDS_INIAPPPRINT,    "Printer Settings"
+    IDS_INIKEYPDEVICE,  "Device"
+    IDS_INIKEYPQUEUE,   "Queue"
+    IDS_INIKEYPPRINTER, "Printer"
+    IDS_INIKEYPFORM,    "Form"
+
+
+    IDS_COLNAME,        "Text"
+    IDS_COLNAME+1,      "Background"
+    IDS_COLNAME+2,      "Selected Text"
+    IDS_COLNAME+3,      "Selected Background"
+    IDS_COLNAME+4,      "Marker"
+    IDS_COLNAME+5,      "Marker Background"
+
+    IDS_DEFININAME,     "rwhexed.ini"
+
+    IDS_STAT_SIZE,      "Size:"
+    IDS_STAT_OFFSET,    "Offset:"
+    IDS_STAT_SELEND,    "Selection:"
+    IDS_STAT_LONGNAME,  "Longname:"
+    IDS_STAT_ACTIVE,    "WORKING"
+
+    IDS_ERROR,          "RW Hex Editor - Error"
+    IDS_WARNING,        "RW Hex Editor - Warning"
+    IDS_INFO,           "RW Hex Editor"
+
+
+    IDS_ERR_NOT2WINDOW,         "Message Queue for second thread could not be created!"
+    IDS_ERR_CANTWRITEPRF,       "Cannot write Profile Data!"
+    IDS_ERR_DOS_CANTCREATET2,   "Thread 2 (the working thread) could not be created!\x0A"
+                                "(Return code: %d)"
+    IDS_ERR_DOS_CANTCREATESEM,  "Could not create semaphore!\x0A"
+                                "(Return code: %d)"
+    IDS_ERR_DOS_WAITSEM,        "An error occurred while waiting for a semaphore!\x0A"
+                                "(Return code: %d)"
+
+}
+
+
+
+
+
+
+
+

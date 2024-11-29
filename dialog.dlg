@@ -1,0 +1,215 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "DIALOG.H"
+
+DLGTEMPLATE IDD_INISPEC LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_INISPEC, 0, 0, 257, 139, NOT FS_DLGBORDER | NOT 
+            WS_SAVEBITS
+    BEGIN
+        LTEXT           "INI File Location:", -1, 6, 105, 82, 8
+        ENTRYFIELD      "", IDD_I_FILESPEC, 8, 96, 183, 8, ES_MARGIN | 
+                        ES_READONLY
+        PUSHBUTTON      "Change", IDD_I_CHANGE, 149, 78, 44, 14
+        CONTROL         "", -1, 198, 14, 1, 115, WC_STATIC, SS_FGNDRECT | 
+                        WS_GROUP | WS_VISIBLE
+        DEFPUSHBUTTON   "OK", DID_OK, 206, 116, 44, 13
+        PUSHBUTTON      "Cancel", DID_CANCEL, 206, 100, 44, 13
+    END
+END
+
+DLGTEMPLATE IDD_SETTINGS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Preferences", IDD_SETTINGS, 56, 6, 331, 183, WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        NOTEBOOK        IDD_S_NOTEBOOK, 0, 0, 331, 183, BKS_BACKPAGESBR | 
+                        BKS_MAJORTABRIGHT | BKS_ROUNDEDTABS | BKS_SPIRALBIND | 
+                        NOT WS_TABSTOP
+    END
+END
+
+DLGTEMPLATE IDD_COLORS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Colors", IDD_COLORS, 0, 0, 257, 139, NOT FS_DLGBORDER | NOT 
+            WS_SAVEBITS
+    BEGIN
+        LISTBOX         IDD_C_LIST, 6, 91, 106, 41
+        SPINBUTTON      IDD_C_RED, 150, 72, 39, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | 
+                        WS_GROUP
+        SPINBUTTON      IDD_C_GREEN, 150, 60, 39, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | 
+                        WS_GROUP
+        SPINBUTTON      IDD_C_BLUE, 150, 48, 39, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | 
+                        WS_GROUP
+        RTEXT           "Red", -1, 121, 73, 26, 8
+        RTEXT           "Green", -1, 121, 61, 26, 8
+        RTEXT           "Blue", -1, 121, 49, 26, 8
+        CONTROL         "", IDD_C_RECT, 11, 54, 97, 24, WC_STATIC, 
+                        SS_FGNDRECT | WS_GROUP | WS_VISIBLE
+        GROUPBOX        "Color", -1, 5, 49, 110, 38, NOT WS_GROUP
+        CONTROL         "", IDD_C_SAMPLE, 11, 9, 171, 26, WC_STATIC, 
+                        SS_FGNDRECT | WS_GROUP | WS_VISIBLE
+        GROUPBOX        "Sample Text", -1, 5, 4, 184, 40, NOT WS_GROUP
+        CONTROL         "", -1, 198, 14, 1, 115, WC_STATIC, SS_FGNDRECT | 
+                        WS_GROUP | WS_VISIBLE
+        DEFPUSHBUTTON   "OK", DID_OK, 206, 116, 44, 13
+        PUSHBUTTON      "Cancel", DID_CANCEL, 206, 100, 44, 13
+        AUTORADIOBUTTON "Default", IDD_C_DEFAULT, 131, 113, 45, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "System", IDD_C_SYSTEM, 131, 103, 43, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Custom", IDD_C_CUSTOM, 131, 93, 45, 10, WS_TABSTOP
+        GROUPBOX        "Color Scheme", -1, 121, 90, 69, 44
+    END
+END
+
+DLGTEMPLATE IDD_ABOUT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Product Information", IDD_ABOUT, 53, 49, 219, 89, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        PUSHBUTTON      "OK", DID_OK, 83, 6, 52, 14
+        CTEXT           "RW Hex Editor", -1, 8, 74, 202, 8, NOT WS_GROUP
+        CTEXT           "Version 1.0", -1, 8, 63, 202, 8, NOT WS_GROUP
+        CTEXT           "(c) Copyright 1996, Rupert Weber-Henschel", -1, 8, 
+                        50, 202, 8, NOT WS_GROUP
+        CTEXT           "All Rights Reserved.", -1, 8, 42, 202, 8, NOT 
+                        WS_GROUP
+        ICON            DID_OK, -1, 13, 64, 21, 16
+        CTEXT           "76503.3001@compuserve.com", -1, 8, 23, 202, 8, NOT 
+                        WS_GROUP
+        CTEXT           "rupert1@ibm.net", -1, 8, 31, 202, 8, NOT WS_GROUP
+    END
+END
+
+DLGTEMPLATE IDD_FONTS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_FONTS, 0, 0, 257, 139, NOT FS_DLGBORDER | NOT 
+            WS_SAVEBITS
+    BEGIN
+        LISTBOX         IDD_F_FONT, 7, 56, 122, 57
+        LISTBOX         IDD_F_SIZE, 148, 56, 41, 57
+        LTEXT           "Font:", -1, 8, 114, 28, 8, NOT WS_GROUP
+        LTEXT           "Size:", -1, 149, 114, 28, 8, NOT WS_GROUP
+        CONTROL         "", IDD_F_SAMPLE, 25, 23, 148, 16, WC_STATIC, 
+                        SS_FGNDFRAME | WS_VISIBLE
+        GROUPBOX        "Sample Text", -1, 17, 18, 164, 30, NOT WS_GROUP
+        CONTROL         "", -1, 198, 14, 1, 115, WC_STATIC, SS_FGNDRECT | 
+                        WS_GROUP | WS_VISIBLE
+        DEFPUSHBUTTON   "OK", DID_OK, 206, 116, 44, 13
+        PUSHBUTTON      "Cancel", DID_CANCEL, 206, 100, 44, 13
+    END
+END
+
+DLGTEMPLATE IDD_ADDEA LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Add EA...", IDD_ADDEA, 45, 86, 245, 42, WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", IDD_EAA_NAME, 51, 25, 105, 8, ES_MARGIN
+        DEFPUSHBUTTON   "OK", DID_OK, 180, 24, 46, 13
+        PUSHBUTTON      "Cancel", DID_CANCEL, 180, 7, 46, 13
+        RTEXT           "EA Name:", -1, 6, 25, 40, 8, NOT WS_GROUP
+    END
+END
+
+DLGTEMPLATE IDD_ASKVAL LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Title", IDD_ASKVAL, 31, 82, 231, 42, WS_VISIBLE, FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", IDD_GTO_OFF, 55, 25, 64, 8, ES_MARGIN
+        DEFPUSHBUTTON   "OK", DID_OK, 180, 23, 46, 13
+        PUSHBUTTON      "Cancel", DID_CANCEL, 180, 7, 46, 13
+        CTEXT           "(enter hex in 0x.... notation)", -1, 21, 13, 132, 8, 
+                        NOT WS_GROUP
+        RTEXT           "Text", IDD_AV_PRE, 1, 25, 50, 8
+        LTEXT           "Text", IDD_AV_AFTER, 123, 25, 55, 8
+    END
+END
+
+DLGTEMPLATE IDD_SEARCH LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Find...", IDD_SEARCH, 35, 48, 272, 124, WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        AUTORADIOBUTTON "String (case-sensitive)", IDD_S_RBSTR, 15, 54, 112, 
+                        10, WS_GROUP | WS_TABSTOP
+        AUTORADIOBUTTON "Hex (e.g.  A3 4 7F B 0C)", IDD_S_RBHEX, 15, 27, 129, 
+                        10, WS_TABSTOP
+        ENTRYFIELD      "", IDD_S_STRENTRY, 19, 43, 226, 8, ES_MARGIN | 
+                        WS_GROUP
+        ENTRYFIELD      "", IDD_S_HEXENTRY, 19, 16, 226, 8, ES_MARGIN | 
+                        WS_GROUP
+        AUTOCHECKBOX    "Whole File", IDD_S_WHOLE, 15, 99, 64, 10, WS_GROUP
+        AUTOCHECKBOX    "Backwards", IDD_S_BACK, 15, 87, 64, 10, WS_GROUP
+        GROUPBOX        "Options", -1, 8, 83, 76, 36
+        GROUPBOX        "Search Pattern", -1, 7, 5, 255, 69
+        DEFPUSHBUTTON   "OK", DID_OK, 210, 101, 49, 13, WS_GROUP
+        PUSHBUTTON      "Cancel", DID_CANCEL, 210, 84, 49, 13, WS_GROUP
+    END
+END
+
+DLGTEMPLATE IDD_PRINTSETUP LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Printer Settings", IDD_PRINTSETUP, 29, 37, 279, 136, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        GROUPBOX        "Font", 304, 7, 30, 259, 52, NOT WS_GROUP
+        GROUPBOX        "Printer", 303, 6, 92, 166, 38, NOT WS_GROUP
+        CONTROL         "", IDD_PS_PRINTER, 14, 63, 136, 55, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_TABSTOP | WS_VISIBLE
+        DEFPUSHBUTTON   "OK", DID_OK, 223, 116, 46, 13
+        PUSHBUTTON      "Cancel", DID_CANCEL, 223, 100, 46, 13
+        AUTOCHECKBOX    "Always use this printer", IDD_PS_ALWAYS, 15, 95, 
+                        148, 10
+        CONTROL         "", IDD_PS_FONT, 14, 0, 122, 50, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | LS_HORZSCROLL | WS_TABSTOP | 
+                        WS_VISIBLE
+        CONTROL         "", IDD_PS_STYLE, 141, 7, 75, 43, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | LS_HORZSCROLL | WS_TABSTOP | 
+                        WS_VISIBLE
+        CONTROL         "", IDD_PS_SIZE, 220, 7, 40, 43, WC_COMBOBOX, 
+                        CBS_DROPDOWN | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Name (B=Bitmap, D=Device):", -1, 14, 51, 122, 8, 
+                        NOT WS_GROUP
+        LTEXT           "Style:", -1, 141, 51, 48, 8, NOT WS_GROUP
+        LTEXT           "Size:", -1, 223, 51, 28, 8, NOT WS_GROUP
+        AUTOCHECKBOX    "List only printer fonts", IDD_PS_ONLYDEVICE, 14, 62, 
+                        122, 10
+    END
+END
+
+DLGTEMPLATE IDD_LONGNAME LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "HexEdit", IDD_LONGNAME, 34, 63, 310, 96, WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        LTEXT           "WARNING! The LONGNAME EA does not match the filenam"
+                        "e.", -1, 15, 76, 269, 13, DT_WORDBREAK | NOT 
+                        WS_GROUP
+        LTEXT           "Filename:", -1, 15, 42, 63, 8, NOT WS_GROUP
+        LTEXT           "LONGNAME:", -1, 15, 65, 63, 8, NOT WS_GROUP
+        ENTRYFIELD      "", IDD_L_EA, 17, 55, 269, 8, ES_MARGIN
+        ENTRYFIELD      "", IDD_L_FILE, 17, 32, 269, 8, ES_MARGIN
+        DEFPUSHBUTTON   "OK", DID_OK, 243, 8, 44, 14
+        PUSHBUTTON      "Cancel", DID_CANCEL, 195, 8, 44, 14
+    END
+END
+
+DLGTEMPLATE IDD_PRINTSTAT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "RW HexEdit", IDD_PRINTSTAT, 142, 131, 194, 81, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CTEXT           "Printing page 1/1000", IDD_PST_PAGE, 0, 64, 194, 8
+        CTEXT           "of", -1, 0, 56, 194, 8
+        CTEXT           "docname", IDD_PST_NAME, 0, 39, 194, 17, 
+                        DT_WORDBREAK
+        CTEXT           "to", -1, 0, 31, 194, 8
+        CTEXT           "printer", IDD_PST_PRINTER, 0, 23, 194, 8
+        PUSHBUTTON      "Cancel", DID_CANCEL, 77, 3, 40, 14
+    END
+END
